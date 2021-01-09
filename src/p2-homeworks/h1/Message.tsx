@@ -8,7 +8,7 @@ export type MessagePropsType = {
   time: string
 }
 
-function Message(props: MessagePropsType) {
+const Message: React.FC<MessagePropsType> = (props: MessagePropsType) => {
   return (
       <div className={classes.messageContainer}>
         <img
