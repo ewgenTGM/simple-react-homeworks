@@ -18,7 +18,8 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
   {_id: 2, name: 'anime', priority: 'low'},
   {_id: 3, name: 'games', priority: 'low'},
   {_id: 4, name: 'work', priority: 'high'},
-  {_id: 5, name: 'html & css', priority: 'middle'}
+  {_id: 5, name: 'html & css', priority: 'middle'},
+  {_id: 6, name: 'porn', priority: 'low'}
 ];
 
 // pure helper functions
@@ -30,8 +31,9 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
 
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
   const affairId: number = affairs.findIndex(item => item._id === _id);
+  if (affairId === -1) return affairs;
   affairs.splice(affairId, 1);
-  return [...affairs]
+  return [...affairs];
 };
 
 function HW2() {
