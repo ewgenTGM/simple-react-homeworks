@@ -3,7 +3,8 @@
 }
 
 .current{
-    color: red;
+    color: blue;
+    font-weight: bold;
 }
 
 .filterBtn{

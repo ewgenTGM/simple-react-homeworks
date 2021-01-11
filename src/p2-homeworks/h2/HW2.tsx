@@ -52,6 +52,7 @@ function HW2() {
         <Affairs
             data={filteredAffairs}
             setFilter={setFilter}
+            currentFilter={filter}
             deleteAffairCallback={deleteAffairCallback}
         />
 

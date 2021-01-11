@@ -6,6 +6,7 @@ import classes from './Affairs.module.css';
 type AffairsPropsType = {
   data: Array<AffairType>,
   setFilter: (filter: FilterType) => void,
+  currentFilter: FilterType,
   deleteAffairCallback: (id: number) => void,
 }
 
@@ -18,36 +19,30 @@ function Affairs(props: AffairsPropsType) {
       />
   ));
 
-  const toggleCurrentFilter = (button: HTMLButtonElement) => {
-    const buttons: NodeListOf<Element> = document.querySelectorAll('.' + classes.filterBtn);
-    buttons.forEach(btn => btn.classList.remove(classes.current));
-    button.classList.add(classes.current);
-  };
-
-  const setFilterType = (e: React.MouseEvent<HTMLButtonElement>, filter: FilterType) => {
+  const setFilterType = (filter: FilterType) => {
     props.setFilter(filter);
-    toggleCurrentFilter(e.currentTarget);
   };
 
   return (
       <div>
+        <button
+            onClick={() => setFilterType('all')}
+            className={`classes.filterBtn ${props.currentFilter === 'all' ? classes.current : ''}`}>All
+        </button>
+        <button
+            onClick={() => setFilterType('high')}
+            className={`classes.filterBtn ${props.currentFilter === 'high' ? classes.current : ''}`}>High
+        </button>
+        <button
+            onClick={() => setFilterType('middle')}
+            className={`classes.filterBtn ${props.currentFilter === 'middle' ? classes.current : ''}`}>Middle
+        </button>
+        <button
+            onClick={() => setFilterType('low')}
+            className={`classes.filterBtn ${props.currentFilter === 'low' ? classes.current : ''}`}>Low
+        </button>
         {props.data.length > 0 ? mappedAffairs : <div>There aren't affairs</div>}
-        <button
-            onClick={(event) => setFilterType(event, 'all')}
-            className={classes.filterBtn}>All
-        </button>
-        <button
-            onClick={(event) => setFilterType(event, 'high')}
-            className={classes.filterBtn}>High
-        </button>
-        <button
-            onClick={(event) => setFilterType(event, 'middle')}
-            className={classes.filterBtn}>Middle
-        </button>
-        <button
-            onClick={(event) => setFilterType(event, 'low')}
-            className={classes.filterBtn}>Low
-        </button>
+
       </div>
   );
 }
