@@ -2,11 +2,35 @@
 
 }
 
-.current{
+.affairs{
+    max-width: 400px;
+}
+
+.buttons_block{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.affairs_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.affair{
+    display: flex;
+    justify-content: space-between;
+}
+
+.current {
     color: blue;
     font-weight: bold;
 }
 
-.filterBtn{
-
+.filterBtn {
+    width: 80px;
+    cursor: pointer;
 }

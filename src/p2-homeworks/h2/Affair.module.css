@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+.affair {
+    margin: 5px 0;
+    padding: 5px;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.affair_id {
+    text-align: center;
+    flex-basis: 10%;
+}
+
+.affair_name {
+    text-align: left;
+    flex-basis: 70%;
+}
+
+.affair_priority {
+    text-align: center;
+    flex-basis: 15%;
+}
+
+.affair_remove_btn {
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    flex-basis: 5%;
+}
+
+.affair_remove_btn:hover {
+    background-color: indianred;
+}
+
+.high_priority {
+    border-right-color: red;
+    border-left-color: red;
+}
+
+.low_priority {
+    border-right-color: green;
+    border-left-color: green;
+}
+
+.middle_priority {
+    border-right-color: goldenrod;
+    border-left-color: goldenrod;
+}
