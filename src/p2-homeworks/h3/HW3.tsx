@@ -3,13 +3,17 @@ import GreetingContainer from "./GreetingContainer";
 
 // types
 export type UserType = {
-    _id: any // need to fix any
-    name: any // need to fix any
+    _id: string
+    name: string // need to fix any
 }
 
 // уровень работы с глобальными данными
 function HW3() {
-    const [users, setUsers] = useState<any>([]); // need to fix any
+    const [users, setUsers] = useState<Array<UserType>>([
+        {_id: 'user1', name: 'Ewgeni'},
+        {            _id: 'user2',
+            name: 'Ivan'
+        }, {_id: 'user3', name: 'Daria'}]); // need to fix any
 
     const addUserCallback = (name: any) => { // need to fix any
         setUsers([]); // need to fix
