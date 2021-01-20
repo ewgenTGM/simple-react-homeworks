@@ -2,6 +2,52 @@
 
 }
 
+.lesson3 {
+    width: 300px;
+}
+
+.fieldset {
+    border: 2px solid blue;
+    border-radius: 5px;
+
+}
+
 .error {
-    border: 1px solid red;
+    border-color: red;
+}
+
+.add_user_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.btn{
+    width: 50px;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.error_span{
+    color: red;
+    text-align: center;
+}
+
+.add_user_input{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    padding: 3px;
+
 }
