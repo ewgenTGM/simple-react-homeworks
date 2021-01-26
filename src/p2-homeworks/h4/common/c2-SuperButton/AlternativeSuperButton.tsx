@@ -1,8 +1,16 @@
-import React from "react";
+import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 
-function AlternativeSuperButton() {
+type DefaultButtonPropTypes = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+
+type AlternativeSuperButtonPropsType = { color?: string, w?: number, h?: number } & DefaultButtonPropTypes;
+
+function AlternativeSuperButton(props: AlternativeSuperButtonPropsType) {
+
+    const {color, w, h, ...restParams} = props
+    const style = {backgroundColor: color, width: w + 'px', height: h + 'px'};
+
     return (
-        <button/>
+        <button {...restParams} style={style}/>
     );
 }
 
