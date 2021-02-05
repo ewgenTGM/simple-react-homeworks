@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import SuperInputText from './common/c1-SuperInputText/SuperInputText';
 import s from './HW4.module.css';
 import SuperButton from './common/c2-SuperButton/SuperButton';
@@ -6,49 +6,49 @@ import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox';
 import AlternativeSuperButton from './common/c2-SuperButton/AlternativeSuperButton';
 
 function HW4() {
-  const [text, setText] = useState<string>('');
+  const [ text, setText ] = useState<string>( '' );
   const error = text.trim() ? '' : 'error: empty field';
   const showAlert = () => {
-    alert(error ? 'введите текст...' : text);
-    setText('');
+    alert( error ? 'введите текст...' : text );
+    setText( '' );
   };
 
-  const [checked, setChecked] = useState<boolean>(false);
-  const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked);
+  const [ checked, setChecked ] = useState<boolean>( false );
+  const testOnChange = ( e: ChangeEvent<HTMLInputElement> ) => setChecked( e.currentTarget.checked );
 
   return (
       <div>
         <hr/>
         homeworks 4
 
-        <div className={s.column}>
+        <div className={ s.column }>
           <SuperInputText
-              value={text}
-              onChangeText={setText}
-              onEnter={showAlert}
-              error={error}
-              className={s.blue}
-              spanClassName={s.italic_text}
+              value={ text }
+              onChangeText={ setText }
+              onEnter={ showAlert }
+              error={ error }
+              className={ s.blue }
+              spanClassName={ s.italic_text }
           />
 
           <SuperButton
               bgColor='blue'
-              onClick={showAlert}
-              className={s.bold_text}>
+              onClick={ showAlert }
+              className={ s.bold_text }>
             Blue
           </SuperButton>
 
           <SuperButton
               bgColor='green'
-              onClick={showAlert}
-              className={s.italic_text}>
+              onClick={ showAlert }
+              className={ s.italic_text }>
             Green
           </SuperButton>
 
           <SuperButton
               bgColor='red'
-              onClick={showAlert}
-              className={`${s.italic_text} ${s.bold_text}`}>
+              onClick={ showAlert }
+              className={ `${ s.italic_text } ${ s.bold_text }` }>
             Red
           </SuperButton>
 
@@ -56,27 +56,26 @@ function HW4() {
             None
           </SuperButton>
 
-          {/*should work (должно работать)*/}
           <SuperCheckbox
-              checked={checked}
-              onChangeChecked={setChecked}
+              checked={ checked }
+              onChangeChecked={ setChecked }
           >
-            some text {/*// этот текст попадёт в children*/}
+            some text
           </SuperCheckbox>
 
-          {/*// onChange тоже должен работать*/}
           <SuperCheckbox
-              checked={checked}
-              onChange={testOnChange}/>
+              checked={ checked }
+              onChange={ testOnChange }>
+            Not random text
+          </SuperCheckbox>
         </div>
 
         <hr/>
-        {/*для личного творчества, могу проверить*/
-        }
-        {/*<AlternativeSuperInputText/>*/
-        }
-        {/*<AlternativeSuperCheckbox/>*/
-        }
+        <AlternativeSuperButton
+            w={ 150 }
+            h={ 50 }
+            color={ 'red' }
+            onClick={ () => alert( 'Hello World' ) }>Children text</AlternativeSuperButton>
         <hr/>
       </div>
   );
