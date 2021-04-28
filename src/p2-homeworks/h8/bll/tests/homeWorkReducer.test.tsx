@@ -54,5 +54,5 @@ test( 'check age 18', () => {
   const action = check18AC();
   const newState = homeWorkReducer( initialState, action );
 
-  
+
 } );
