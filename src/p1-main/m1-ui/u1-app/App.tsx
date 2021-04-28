@@ -9,21 +9,26 @@ import HW6 from '../../../p2-homeworks/h6/HW6';
 import HW7 from '../../../p2-homeworks/h7/HW7';
 import HW8 from '../../../p2-homeworks/h8/HW8';
 import HW9 from '../../../p2-homeworks/h9/HW9';
+import HW10 from '../../../p2-homeworks/h10/HW10';
+import { Provider } from 'react-redux';
+import store from '../../../p2-homeworks/h10/bll/store';
 
 function App() {
-  return (
-      <div className={ s.App }>
-        <div>react homeworks:</div>
-        {/*<HW1/>*/ }
-        {/*<HW2/>*/ }
-        {/*<HW3/>*/ }
-        {/*<HW4/>*/ }
-        {/*<HW5/>*/ }
-        <HW9/>
-        {/*<HW7/>*/ }
-        {/*<HW8/>*/ }
-      </div>
-  );
+	return (
+		<Provider store={store}>
+			<div className={s.App}>
+				<div>react homeworks:</div>
+				{/*<HW1/>*/}
+				{/*<HW2/>*/}
+				{/*<HW3/>*/}
+				{/*<HW4/>*/}
+				{/*<HW5/>*/}
+				<HW10 />
+				{/*<HW7/>*/}
+				{/*<HW8/>*/}
+			</div>
+		</Provider>
+	);
 }
 
 export default App;

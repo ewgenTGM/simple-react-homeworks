@@ -1,38 +1,45 @@
-import React from "react";
-import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import SuperButton from '../h4/common/c2-SuperButton/SuperButton';
+import { SetLoading } from './bll/loadingReducer';
+import { AppStoreType } from './bll/store';
+import spinner from './spinner.png';
 
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false;
+	const loading = useSelector<AppStoreType, boolean>(
+		(state) => state.loading.loading
+	);
 
-    const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log("loading...");
-    };
+	const dispatch = useDispatch();
 
-    return (
-        <div>
-            <hr/>
-            homeworks 10
+	const setLoading = () => {
+		dispatch(SetLoading(true));
+		setTimeout(() => {
+			dispatch(SetLoading(false));
+		}, 2000);
+		console.log('loading...');
+	};
 
-            {/*should work (должно работать)*/}
-            {loading
-                ? (
-                    <div>крутилка...</div>
-                ) : (
-                    <div>
-                        <SuperButton onClick={setLoading}>set loading...</SuperButton>
-                    </div>
-                )
-            }
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
-        </div>
-    );
+	return (
+		<div>
+			<hr />
+			homeworks 10
+			{/*should work (должно работать)*/}
+			{loading ? (
+				<div>{spinner}</div>
+			) : (
+				<div>
+					<SuperButton onClick={setLoading}>
+						set loading...
+					</SuperButton>
+				</div>
+			)}
+			<hr />
+			{/*для личного творчества, могу проверить*/}
+			{/*<Alternative/>*/}
+			<hr />
+		</div>
+	);
 }
 
 export default HW10;
