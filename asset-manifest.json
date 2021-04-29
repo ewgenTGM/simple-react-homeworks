@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/simple-react-homeworks/static/css/main.f4ae15e6.chunk.css",
+    "main.js": "/simple-react-homeworks/static/js/main.bc7d042f.chunk.js",
+    "main.js.map": "/simple-react-homeworks/static/js/main.bc7d042f.chunk.js.map",
+    "runtime-main.js": "/simple-react-homeworks/static/js/runtime-main.fa749130.js",
+    "runtime-main.js.map": "/simple-react-homeworks/static/js/runtime-main.fa749130.js.map",
+    "static/js/2.6e0e0bd4.chunk.js": "/simple-react-homeworks/static/js/2.6e0e0bd4.chunk.js",
+    "static/js/2.6e0e0bd4.chunk.js.map": "/simple-react-homeworks/static/js/2.6e0e0bd4.chunk.js.map",
+    "index.html": "/simple-react-homeworks/index.html",
+    "static/css/main.f4ae15e6.chunk.css.map": "/simple-react-homeworks/static/css/main.f4ae15e6.chunk.css.map",
+    "static/js/2.6e0e0bd4.chunk.js.LICENSE.txt": "/simple-react-homeworks/static/js/2.6e0e0bd4.chunk.js.LICENSE.txt",
+    "static/media/spinner.b45de05b.png": "/simple-react-homeworks/static/media/spinner.b45de05b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa749130.js",
+    "static/js/2.6e0e0bd4.chunk.js",
+    "static/css/main.f4ae15e6.chunk.css",
+    "static/js/main.bc7d042f.chunk.js"
+  ]
+}
