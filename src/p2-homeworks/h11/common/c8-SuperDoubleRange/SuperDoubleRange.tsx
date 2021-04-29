@@ -1,24 +1,22 @@
-import React from "react";
+import { Slider } from 'antd';
+import React from 'react';
+// import 'antd/dist/antd.css';
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value: [number, number]) => void
-    value?: [number, number]
-    // min, max, step, disable, ...
-}
+	onChange?: (value: [number, number]) => void;
+	value?: [number, number];
+	min?: number;
+	max?: number;
+	step?: number;
+	disable?: boolean;
+};
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
-    {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
-) => {
-    // сделать самому, можно подключать библиотеки
-
-    return (
-        <>
-            DoubleRange
-        </>
-    );
-}
+const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (props) => {
+	return (
+		<>
+			<Slider range {...props} />
+		</>
+	);
+};
 
 export default SuperDoubleRange;

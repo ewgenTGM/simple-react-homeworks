@@ -24,9 +24,10 @@ function HW10() {
 		<div>
 			<hr />
 			homeworks 10
-			{/*should work (должно работать)*/}
 			{loading ? (
-				<div>{spinner}</div>
+				<div>
+					<img src={spinner} width={150} />
+				</div>
 			) : (
 				<div>
 					<SuperButton onClick={setLoading}>
@@ -34,10 +35,6 @@ function HW10() {
 					</SuperButton>
 				</div>
 			)}
-			<hr />
-			{/*для личного творчества, могу проверить*/}
-			{/*<Alternative/>*/}
-			<hr />
 		</div>
 	);
 }
