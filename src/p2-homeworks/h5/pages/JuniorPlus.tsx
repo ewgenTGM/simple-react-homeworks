@@ -1,10 +1,10 @@
 import React from 'react';
-import HW6 from '../../h6/HW6';
+import { HW13 } from '../../h13/HW13';
 
 function JuniorPlus() {
 	return (
 		<div>
-			<HW6 />
+			<HW13 />
 		</div>
 	);
 }
